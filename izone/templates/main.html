@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+    <script src="{{ url_for('static',filename='js/Jquery.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static',filename='js/Jquery.js') }}"></script>
+    <title>아이즈원 팬페이지</title>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <a href="{{ url_for('main') }}">
+          <img src="{{ url_for('static',filename='img/logo.gif') }}" class="logo">
+        </a>
+      </header>
+      <nav>
+        <a href="{{ url_for('main') }}"class="list" id="li1">INTRODUCE</a>
+        <a href="{{ url_for('profile') }}"class="list"id="li2">PROFILE</a>
+        <a href="{{ url_for('image') }}"class="list"id="li3">PICTURES</a>
+        <a href="{{ url_for('video') }}"class="list"id="li4">VIDEOS</a>
+      </nav>
+      {% block main %}
+      <div class="inside" style="background-image: url({{ url_for('static', filename='img/background.jpg') }});">
+        <div class="inside_cover">
+            <div id="intro_text_h1">"12명의 소녀가 하나 되는 순간"</div>
+          <div class="intro_main">
+            <div class="intro_main_text">
+              아이즈원 팬 페이지에 오신 것을 환영합니다.
+            </div>
+            <img src="{{ url_for('static',filename='img/intro_1.png') }}" class="intro_main_img">
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
+  </body>
+</html>

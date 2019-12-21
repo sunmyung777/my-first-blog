@@ -1,0 +1,10 @@
+h1{
+	color:blue;
+}
+.graph{
+	width:100vw;
+	height: 100vh;
+	display: block;
+	border: none;
+	zoom:2;
+}
